@@ -10,11 +10,10 @@ import { TasksProps } from "../../../@types/Tasks/index";
 const Tasks = ({
   handleFormSubimit,
   handleNewTaskList,
+  handleWithTaskDelete,
   newTask,
   tasks,
 }: TasksProps) => {
-  console.log(newTask);
-
   return (
     <ContainerTask>
       <FormTaskContainer onSubmit={handleFormSubimit}>
@@ -27,7 +26,7 @@ const Tasks = ({
         <ButtonTaskForm>Adicionar</ButtonTaskForm>
       </FormTaskContainer>
       {tasks.map((task) => (
-        <TaskList task={task} />
+        <TaskList task={task} handleWithTaskDelete={handleWithTaskDelete} />
       ))}
     </ContainerTask>
   );

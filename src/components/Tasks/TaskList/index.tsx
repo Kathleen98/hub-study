@@ -3,12 +3,12 @@ import { ButtonTaskForm } from "../styles";
 import { ListTasks, TaskListContainer } from "./styles";
 import { TaskListProps } from "../../../../@types/Tasks/tasksList/index";
 
-const TaskList = ({ task }: TaskListProps) => {
+const TaskList = ({ task, handleWithTaskDelete }: TaskListProps) => {
   return (
     <TaskListContainer>
       <ListTasks>
         <p>{task}</p>
-        <ButtonTaskForm>
+        <ButtonTaskForm onClick={() => handleWithTaskDelete(task)}>
           <Trash size={"1rem"} />
         </ButtonTaskForm>
       </ListTasks>

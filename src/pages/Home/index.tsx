@@ -15,12 +15,20 @@ const Home = () => {
     setNewTask(e.target.value);
   };
 
+  const handleWithTaskDelete = (taskForDelete: string) => {
+    const filterWithDeletedTask = tasks.filter(
+      (task: string) => task !== taskForDelete
+    );
+    setTasks(filterWithDeletedTask);
+  };
+
   return (
     <Tasks
       tasks={tasks}
       newTask={newTask}
       handleNewTaskList={handleNewTaskList}
       handleFormSubimit={handleFormSubimit}
+      handleWithTaskDelete={handleWithTaskDelete}
     />
   );
 };

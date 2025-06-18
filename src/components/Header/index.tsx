@@ -10,7 +10,7 @@ export const Header = () => {
   }[] = [
     { label: "Dashboard", route: "/Dashboard" },
      { label: "Matérias", route: "/Issues" },
-    { label: "Resumos", route: "#" },
+    { label: "Resumos", route: "/Summaries" },
     { label: "Cronograma", route: "#" },
     { label: "Pomodoro", route: "#" },
     { label: "Progresso", route: "#" },
